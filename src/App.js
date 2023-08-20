@@ -11,13 +11,22 @@ class App extends React.Component {
     'name' : "Quốc Mạnhz"
   }
 
+  handleMouseOver (event)
+  {
+    console.log(event)
+    console.log(event.pageX)
+    // console.log("my name is", this.state.name)
+  }
+
   render() {
     return (
       <div>
         Hello world ManhTQ
         {this.state.name}
 
-        <MyComponent></MyComponent>
+        <MyComponent></MyComponent> 
+
+        <button onMouseOver={this.handleMouseOver}>Click mouse over</button>
       </div>
     )
   }
